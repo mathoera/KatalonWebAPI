@@ -1,0 +1,2896 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "Gems.Web"
+    },
+    "host": "bpa2-cd-web.europe.shell.com",
+    "basePath": "/Prospect",
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+        "/api/resourceManagement/v2/resources/{resourceId}/approvers": {
+            "get": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_ApproversForResource",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/approvals/submit/{approverId}": {
+            "put": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_SubmitResource",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "approverId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/approvals/requestunapproval/{approverId}": {
+            "put": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_RequestUnApprovalResource",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "approverId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/approvals/recall": {
+            "put": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_RecallSubmittedResource",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "comment",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/approvals/accept": {
+            "put": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_AcceptSubmittedResource",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "requestData",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.Areas.ProspectManagement.Approval.Models.ApprovalAcceptRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/approvals/reject": {
+            "put": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_RejectSubmittedResource",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "comment",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/approvals/unapprove": {
+            "put": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_UnapproveResource",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "requestData",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.Areas.ProspectManagement.Approval.Models.ApprovalUnapproveRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/assurers": {
+            "get": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_AssurersForResource",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/assurance/selectedassurer": {
+            "get": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_SelectedAssurersForResource",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/assignedassurers": {
+            "get": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_GetAssignedAssurers",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/assurance/assure": {
+            "put": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_AssureResource",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "comment",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/assurance/unassure": {
+            "put": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_UnassureResource",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "comment",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/assurance/request": {
+            "put": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_RequestAssuranceForResource",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "requestData",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.Areas.ProspectManagement.Approval.Models.ApprovalAcceptRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/recipients": {
+            "get": {
+                "tags": [
+                    "ApprovalApi"
+                ],
+                "operationId": "ApprovalApi_RecipientsForResource",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/attachments": {
+            "get": {
+                "tags": [
+                    "AttachmentsApi"
+                ],
+                "operationId": "AttachmentsApi_GetAttachments",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{prospectId}/ConsistencyCheck": {
+            "get": {
+                "tags": [
+                    "ConsistencyCheckApi"
+                ],
+                "operationId": "ConsistencyCheckApi_ConsistencyCheck",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "prospectId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "segmentId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "raId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.ResourceManagement.ConsistencyCheck.Models.ConsistencyCheckResult"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/historychanges": {
+            "get": {
+                "tags": [
+                    "HistoryApi"
+                ],
+                "operationId": "HistoryApi_GetHistoryChangesByResourceId",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/LinkedSegments/Get": {
+            "get": {
+                "tags": [
+                    "LinkedSegments"
+                ],
+                "operationId": "LinkedSegments_Get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "riskAssessmentId",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/LinkedSegments/List": {
+            "get": {
+                "tags": [
+                    "LinkedSegments"
+                ],
+                "operationId": "LinkedSegments_List",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/MyProspects/GetAllResourcesForUser": {
+            "get": {
+                "tags": [
+                    "MyProspectsApi"
+                ],
+                "operationId": "MyProspectsApi_GetAllResourcesForUser",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Gems.Web.Models.ResourceDetails"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/MyProspects/GetResourcesCreatedByUser": {
+            "get": {
+                "tags": [
+                    "MyProspectsApi"
+                ],
+                "operationId": "MyProspectsApi_GetResourcesCreatedByUser",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Gems.Web.Models.ResourceDetails"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/MyRollupCases/DeleteRollupCase": {
+            "get": {
+                "tags": [
+                    "MyRollupCasesApi"
+                ],
+                "operationId": "MyRollupCasesApi_DeleteRollupCase",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "rollupCaseId",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/MyRollupCases/UpdateRollupCase": {
+            "post": {
+                "tags": [
+                    "MyRollupCasesApi"
+                ],
+                "operationId": "MyRollupCasesApi_UpdateRollupCase",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "model",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.Models.RollupCase"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.Models.RollupCase"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/MyRollupCases/RemoveUnaccessibleResourcesFromRollupCase": {
+            "get": {
+                "tags": [
+                    "MyRollupCasesApi"
+                ],
+                "operationId": "MyRollupCasesApi_RemoveUnaccessibleResourcesFromRollupCase",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "rollupCaseId",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/RollupCase/CreateRollupCase": {
+            "post": {
+                "tags": [
+                    "PortfolioAnalysisRollupCaseApi"
+                ],
+                "operationId": "PortfolioAnalysisRollupCaseApi_CreateRollupCase",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "rollupCase",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.Models.RollupCase"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.Models.RollupCase"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/RollupCase/DeleteRollupCase": {
+            "get": {
+                "tags": [
+                    "PortfolioAnalysisRollupCaseApi"
+                ],
+                "operationId": "PortfolioAnalysisRollupCaseApi_DeleteRollupCase",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "rollupCaseId",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/RollupCase/SaveRollupCase": {
+            "post": {
+                "tags": [
+                    "PortfolioAnalysisRollupCaseApi"
+                ],
+                "operationId": "PortfolioAnalysisRollupCaseApi_SaveRollupCase",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "model",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.Models.RollupCase"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.Models.RollupCase"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/RollupCase/PrepareRollupCaseForCalculation": {
+            "get": {
+                "tags": [
+                    "PortfolioAnalysisRollupCaseApi"
+                ],
+                "operationId": "PortfolioAnalysisRollupCaseApi_PrepareRollupCaseForCalculation",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "rollupCaseId",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/ProspectDevelopment/SetProspect": {
+            "put": {
+                "tags": [
+                    "ProspectDevelopment"
+                ],
+                "operationId": "ProspectDevelopment_SetProspect",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.Controllers.SetProspectRequestContent"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/ProspectDevelopment/SetUserRoles": {
+            "put": {
+                "tags": [
+                    "ProspectDevelopment"
+                ],
+                "operationId": "ProspectDevelopment_SetUserRoles",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.Controllers.SetUserRolesRequestContent"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/ProspectVersions/{prospectId}": {
+            "get": {
+                "tags": [
+                    "ProspectVersionsApi"
+                ],
+                "operationId": "ProspectVersionsApi_GetProspectVersions",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "prospectId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "StartDate",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "EndDate",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/ProspectVersions/data/{prospectId}": {
+            "get": {
+                "tags": [
+                    "ProspectVersionsApi"
+                ],
+                "operationId": "ProspectVersionsApi_GetDataForProspectVersions",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "prospectId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "VIds",
+                        "in": "query",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int32"
+                        },
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/RecentItems/GetRecentItems": {
+            "get": {
+                "tags": [
+                    "RecentItems"
+                ],
+                "operationId": "RecentItems_GetRecentItems",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "returnAll",
+                        "in": "query",
+                        "required": true,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/ResourceManagement/GetPlays": {
+            "get": {
+                "tags": [
+                    "ResourceManagementApi"
+                ],
+                "operationId": "ResourceManagementApi_GetPlays",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "term",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/ResourceManagement/GetBasins": {
+            "get": {
+                "tags": [
+                    "ResourceManagementApi"
+                ],
+                "operationId": "ResourceManagementApi_GetBasins",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "term",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/create/{longitude}/{latitude}": {
+            "get": {
+                "tags": [
+                    "ResourcesApi"
+                ],
+                "operationId": "ResourcesApi_CreateResource",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "longitude",
+                        "in": "path",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    },
+                    {
+                        "name": "latitude",
+                        "in": "path",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}": {
+            "get": {
+                "tags": [
+                    "ResourcesApi"
+                ],
+                "operationId": "ResourcesApi_GetResourceById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "ResourcesApi"
+                ],
+                "operationId": "ResourcesApi_UpdateResource",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.ResourceManagement.Models.ResourceManagementChangelog"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "ResourcesApi"
+                ],
+                "operationId": "ResourcesApi_DeleteResource",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources": {
+            "post": {
+                "tags": [
+                    "ResourcesApi"
+                ],
+                "operationId": "ResourcesApi_SaveNewResource",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.ResourceManagement.Models.ResourceManagementChangelog"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/missingStructure": {
+            "put": {
+                "tags": [
+                    "ResourcesApi"
+                ],
+                "operationId": "ResourcesApi_LoadMissingStructure",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "requestData",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.ResourceManagement.Resource.Models.LoadMissingStructureRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/prospectDistributions": {
+            "put": {
+                "tags": [
+                    "ResourcesApi"
+                ],
+                "operationId": "ResourcesApi_LoadProspectDistributions",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "requestData",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.ResourceManagement.Resource.Models.LoadMissingStructureRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/loadStructure": {
+            "get": {
+                "tags": [
+                    "ResourcesApi"
+                ],
+                "operationId": "ResourcesApi_LoadResourceStructure",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "isForBusinessCase",
+                        "in": "query",
+                        "required": true,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/distributions/samples/{distributionId}": {
+            "get": {
+                "tags": [
+                    "ResourcesApi"
+                ],
+                "operationId": "ResourcesApi_GetDistributionSamples",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "distributionId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/searchvolumes/{prospectAnalysisId}": {
+            "get": {
+                "tags": [
+                    "SearchVolumesApi"
+                ],
+                "operationId": "SearchVolumesApi_GetProspectsAnalysisById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "prospectAnalysisId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/searchvolumespmsa/{pmsaId}": {
+            "get": {
+                "tags": [
+                    "SearchVolumesApi"
+                ],
+                "operationId": "SearchVolumesApi_GetProspectsMultiScenarioAnalysisById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "pmsaId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/prospectanalysisdata/{prospectAnalysisId}": {
+            "put": {
+                "tags": [
+                    "SearchVolumesApi"
+                ],
+                "operationId": "SearchVolumesApi_GetGeoXVolumeDataByProspectAnalysisId",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "prospectAnalysisId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SavePackage",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.ResourceManagement.Models.ResourceManagementChangelog"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/securitydata": {
+            "get": {
+                "tags": [
+                    "ShareResourceApi"
+                ],
+                "operationId": "ShareResourceApi_GetSecurityDataForResource",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/securitydata/{searchTerm}": {
+            "get": {
+                "tags": [
+                    "ShareResourceApi"
+                ],
+                "operationId": "ShareResourceApi_GetSecurityDataForResource",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "searchTerm",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/{resourceId}/objectives/scenarios/tanks": {
+            "get": {
+                "tags": [
+                    "TankApi"
+                ],
+                "operationId": "TankApi_GetTanksByResourceId",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "resourceId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/linkedriskassessments": {
+            "get": {
+                "tags": [
+                    "TankApi"
+                ],
+                "operationId": "TankApi_GetLinkedRiskAssessments",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/tanks/distributions/samples/{distributionId}": {
+            "get": {
+                "tags": [
+                    "TankApi"
+                ],
+                "operationId": "TankApi_GetDistributionSamples",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "distributionId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/common/v1/users/current": {
+            "get": {
+                "tags": [
+                    "UserApi"
+                ],
+                "operationId": "UserApi_GetCurrentUser",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "fromRA",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v2/resources/volumesAtCommercialCutoff": {
+            "put": {
+                "tags": [
+                    "VolumesAtCommercialCutoffApi"
+                ],
+                "operationId": "VolumesAtCommercialCutoffApi_CalculateVolumesAtCommercialCutoff",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.ResourceManagement.Models.ResourceManagementChangelog"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/resourceManagement/v3/resources/volumesAtCommercialCutoff": {
+            "put": {
+                "tags": [
+                    "VolumesAtCommercialCutoffApi"
+                ],
+                "operationId": "VolumesAtCommercialCutoffApi_CalculateCommercialVolumes",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Gems.Web.ResourceManagement.Models.ResourceManagementChangelog"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Gems.Web.Areas.ProspectManagement.Approval.Models.ApprovalAcceptRequest": {
+            "type": "object",
+            "properties": {
+                "comment": {
+                    "type": "string"
+                },
+                "assurerIds": {
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "Gems.Web.Areas.ProspectManagement.Approval.Models.ApprovalUnapproveRequest": {
+            "type": "object",
+            "properties": {
+                "comment": {
+                    "type": "string"
+                },
+                "recipientsIds": {
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "Gems.Web.ResourceManagement.ConsistencyCheck.Models.ConsistencyCheckResult": {
+            "type": "object",
+            "properties": {
+                "ProspectId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Segments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Gems.Web.ResourceManagement.ConsistencyCheck.Models.ConsistencyCheckSegmentResult"
+                    }
+                }
+            }
+        },
+        "Gems.Web.ResourceManagement.ConsistencyCheck.Models.ConsistencyCheckSegmentResult": {
+            "type": "object",
+            "properties": {
+                "SegmentId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "IsConsistent": {
+                    "type": "boolean"
+                },
+                "PropertyInfo": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Gems.Web.ResourceManagement.ConsistencyCheck.Models.ConsistencyCheckPropertyInfo"
+                    }
+                }
+            }
+        },
+        "Gems.Web.ResourceManagement.ConsistencyCheck.Models.ConsistencyCheckPropertyInfo": {
+            "type": "object",
+            "properties": {
+                "TankPropertyType": {
+                    "format": "int32",
+                    "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54,
+                        55,
+                        56,
+                        57,
+                        58,
+                        59,
+                        60,
+                        61,
+                        62,
+                        63,
+                        64
+                    ],
+                    "type": "integer"
+                },
+                "TankPropertyName": {
+                    "type": "string"
+                },
+                "GeoXValue": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "RAValue": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "IsConsistent": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "Gems.Web.Models.ResourceDetails": {
+            "type": "object",
+            "properties": {
+                "ResourceID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                "StrategicThemeName": {
+                    "type": "string"
+                },
+                "CountryName": {
+                    "type": "string"
+                },
+                "HydrocarbonTypeName": {
+                    "type": "string"
+                },
+                "ProspectDataStateName": {
+                    "type": "string"
+                },
+                "ResourceClassificationName": {
+                    "type": "string"
+                },
+                "GeoxTechnicalId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "GeoxCommercialId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "DevelopmentType": {
+                    "type": "string"
+                }
+            }
+        },
+        "Gems.Web.Models.RollupCase": {
+            "type": "object",
+            "properties": {
+                "RollupCaseId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                "LastUpdatedOn": {
+                    "type": "string"
+                },
+                "DeletedResourceNames": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "HasAccessToAllResources": {
+                    "type": "boolean"
+                },
+                "SelectedResources": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Gems.Web.Models.RollupCaseResourceSelection"
+                    }
+                },
+                "CorrelationType": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "AssociationType": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "UniformCorrelationFactor": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "UniformAssociationFactor": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "CorrelationMatrix": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Gems.Web.Models.DependencyMatrix"
+                    }
+                },
+                "AssociationMatrix": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Gems.Web.Models.DependencyMatrix"
+                    }
+                }
+            }
+        },
+        "Gems.Web.Models.RollupCaseResourceSelection": {
+            "type": "object",
+            "properties": {
+                "RollupCaseResourceSelectionId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "RollupCaseId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ResourceId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ResourceName": {
+                    "type": "string"
+                }
+            }
+        },
+        "Gems.Web.Models.DependencyMatrix": {
+            "type": "object",
+            "properties": {
+                "ParentNodeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "FromNodeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "FromNodeGuid": {
+                    "type": "string"
+                },
+                "FromNodeName": {
+                    "type": "string"
+                },
+                "ToNodeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ToNodeGuid": {
+                    "type": "string"
+                },
+                "ToNodeName": {
+                    "type": "string"
+                },
+                "Factor": {
+                    "format": "double",
+                    "type": "number"
+                }
+            }
+        },
+        "Gems.Web.Controllers.SetProspectRequestContent": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "type": "string"
+                },
+                "ResourceId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "RequesterId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ApproverId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "AssurerIds": {
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "Gems.Web.Controllers.SetUserRolesRequestContent": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "type": "string"
+                },
+                "UserId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "RoleIds": {
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "Gems.Web.ResourceManagement.Models.ResourceManagementChangelog": {
+            "type": "object",
+            "properties": {
+                "IsResourceDirty": {
+                    "type": "boolean"
+                },
+                "Resource": {
+                    "$ref": "#/definitions/Gems.Web.ResourceManagement.Resource.Models.Resource"
+                },
+                "BusinessCase": {
+                    "$ref": "#/definitions/Gems.Web.ResourceManagement.VolumesAtCommercialCutoff.Models.BusinessCase"
+                },
+                "Tanks": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Gems.Web.ResourceManagement.Tank.Models.Tank"
+                    }
+                },
+                "AccessUsersToAdd": {
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                },
+                "AccessUsersToDelete": {
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                },
+                "AccessGroupsToAdd": {
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                },
+                "AccessGroupsToDelete": {
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                },
+                "AttachmentsToDelete": {
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                },
+                "Attachments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Gems.Web.ResourceManagement.Attachments.Models.Attachment"
+                    }
+                },
+                "RemoveCommercialVolumes": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "Gems.Web.ResourceManagement.Resource.Models.Resource": {
+            "type": "object",
+            "properties": {
+                "ResourceId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                "Latitude": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "Longitude": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "CoordinateSystemId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Elevation": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "CountryId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "GesOil": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "GesSolutionGas": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "GesFreeGas": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "GesCondensates": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "HydrocarbonTypeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "HydrocarbonTypeName": {
+                    "type": "string"
+                },
+                "CentrePointIsFixed": {
+                    "type": "boolean"
+                },
+                "ExternalGuid": {
+                    "type": "string"
+                },
+                "DataStateId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "DeliveryThemeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "StrategicThemeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "EntitlementId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "OwnershipGovernanceId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "IsInOperatingPlan": {
+                    "type": "boolean"
+                },
+                "ShellWorkingInterestShareOil": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "ShellWorkingInterestShareSolutionGas": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "ShellWorkingInterestShareFreeGas": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "ShellWorkingInterestShareCondensates": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "OutlineData": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "type": "array",
+                                "items": {
+                                    "format": "double",
+                                    "type": "number"
+                                }
+                            }
+                        }
+                    }
+                },
+                "RequesterId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ApproverId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "AssurerId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "GeoxTechnicalId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "GeoxTechnicalGuid": {
+                    "type": "string"
+                },
+                "GeoxCommercialId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "GeoxCommercialGuid": {
+                    "type": "string"
+                },
+                "AnaloguesIndicateMsvVsCco": {
+                    "type": "boolean"
+                },
+                "EarlyDevelopmentAssessmentEmvVsDcPct": {
+                    "type": "boolean"
+                },
+                "Unrecoverable": {
+                    "type": "boolean"
+                },
+                "ResourceClassificationAId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CommercialityAId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Distributions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Gems.Web.ResourceManagement.Models.VolumeResult"
+                    }
+                },
+                "LicenceBlockUid": {
+                    "type": "string"
+                },
+                "IsLicenceBlockGesSwisManualOverride": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "Gems.Web.ResourceManagement.VolumesAtCommercialCutoff.Models.BusinessCase": {
+            "type": "object",
+            "properties": {
+                "ResourceId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CutOffOil": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "CutOffSolutionGas": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "CutOffFreeGas": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "CutOffCondensates": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "PostLicenseShare": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "WellDrillFactor": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "CutOffOilEquivalent": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "DevelopmentTypeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CommercialIncludeCalculationTypeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CommercialCutoffLiquid": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "CommercialCutoffGas": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "CommercialCutoffOilEquivalent": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "PhaseSpecificLiquidReportingTypeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CommercialProfileId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "GasOilRatio": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "CondensateGasRatio": {
+                    "format": "double",
+                    "type": "number"
+                }
+            }
+        },
+        "Gems.Web.ResourceManagement.Tank.Models.Tank": {
+            "type": "object",
+            "properties": {
+                "TankId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ResourceId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "PlayId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Bpa2PlayPlayId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "PlayName": {
+                    "type": "string"
+                },
+                "BasinId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "BasinName": {
+                    "type": "string"
+                },
+                "AgeFrom": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "AgeTo": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                "ExternalGuid": {
+                    "type": "string"
+                },
+                "GeoxTechnicalId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "GeoxTechnicalGuid": {
+                    "type": "string"
+                },
+                "GeoxCommercialId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "GeoxCommercialGuid": {
+                    "type": "string"
+                },
+                "RiskAssessmentId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "TankAnalysisTypeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CalculatedDistributions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Gems.Web.ResourceManagement.Tank.Models.CalculatedDistribution"
+                    }
+                },
+                "Latitude": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "Longitude": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "CoordinateSystemId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CentrePointIsFixed": {
+                    "type": "boolean"
+                },
+                "OutlineData": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "type": "array",
+                                "items": {
+                                    "format": "double",
+                                    "type": "number"
+                                }
+                            }
+                        }
+                    }
+                },
+                "ScenarioName": {
+                    "type": "string"
+                },
+                "ScenarioWeighting": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "IsTestedDrilled": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "Gems.Web.ResourceManagement.Attachments.Models.Attachment": {
+            "type": "object",
+            "properties": {
+                "AttachmentId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ResourceId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Url": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                "CreatedByUserId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CreatedByUserDisplayName": {
+                    "type": "string"
+                },
+                "CreatedOnDate": {
+                    "type": "string"
+                },
+                "UpdatedByUserId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "UpdatedByUserDisplayName": {
+                    "type": "string"
+                },
+                "UpdatedOnDate": {
+                    "type": "string"
+                }
+            }
+        },
+        "Gems.Web.ResourceManagement.Models.VolumeResult": {
+            "type": "object",
+            "properties": {
+                "Name": {
+                    "type": "string"
+                },
+                "DistributionId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "DistributionTypeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CalculationTypeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Pos": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "Mean": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "ExpectationMean": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "P90": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "P50": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "P10": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "Min": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "Max": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "ChartData": {
+                    "$ref": "#/definitions/Gems.Web.Common.ExpectationChartViewer.Models.ExpectationChartModel"
+                }
+            }
+        },
+        "Gems.Web.ResourceManagement.Tank.Models.CalculatedDistribution": {
+            "type": "object",
+            "properties": {
+                "DistributionId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "UnitSet": {
+                    "type": "string"
+                },
+                "Unit": {
+                    "type": "string"
+                },
+                "UnitDescription": {
+                    "type": "string"
+                },
+                "CalculationTypeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "DistributionTypeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Mean": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "Pos": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "P10": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "P50": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "P90": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "Min": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "Max": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "ExpectationMean": {
+                    "format": "double",
+                    "type": "number"
+                }
+            }
+        },
+        "Gems.Web.Common.ExpectationChartViewer.Models.ExpectationChartModel": {
+            "type": "object",
+            "properties": {
+                "ExpectationCurveData": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "format": "double",
+                            "type": "number"
+                        }
+                    }
+                },
+                "FrequencyCurveData": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "format": "double",
+                            "type": "number"
+                        }
+                    }
+                },
+                "PercentileData": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Gems.Web.Common.ExpectationChartViewer.Models.ExpectationChartPercentileModel"
+                    }
+                }
+            }
+        },
+        "Gems.Web.Common.ExpectationChartViewer.Models.ExpectationChartPercentileModel": {
+            "type": "object",
+            "properties": {
+                "Title": {
+                    "type": "string"
+                },
+                "Data": {
+                    "type": "array",
+                    "items": {
+                        "format": "double",
+                        "type": "number"
+                    }
+                }
+            }
+        },
+        "Gems.Web.ResourceManagement.Resource.Models.LoadMissingStructureRequest": {
+            "type": "object",
+            "properties": {
+                "ResourceData": {
+                    "$ref": "#/definitions/Gems.Web.ResourceManagement.Models.ResourceManagementChangelog"
+                },
+                "IsForBusinessCase": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}
