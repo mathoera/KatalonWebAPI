@@ -1,0 +1,26 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.127670570000078,
+          41.791970294000066
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1,
+        "OutlineComment": "ProspectOutline"
+      }
+    }
+  ]
+}

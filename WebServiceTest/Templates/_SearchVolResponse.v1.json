@@ -1,0 +1,18 @@
+{
+  "IsFound": "BPA2IgnoreValue",
+  "GeoxObjectType": "BPA2IgnoreValue",
+  "ProspectName": "BPA2IgnoreValue",
+  "ProspectAnalysisName": "BPA2IgnoreValue",
+  "ProspectAnalysisId": "BPA2IgnoreValue",
+  "ProspectAnalysisExternalId": "BPA2IgnoreValue",
+  "ProspectAnalysisDescription": "BPA2IgnoreValue",
+  "ProspectAnalysisIsCalculated": "BPA2IgnoreValue",
+  "ProspectAnalysisIsStochastic": "BPA2IgnoreValue",
+  "HasSegmentAnalysisEnrolled": "BPA2IgnoreValue",
+  "SegmentAnalysisIsCalculated": "BPA2IgnoreValue",
+  "SegmentAnalysisIsStochastic": "BPA2IgnoreValue",
+  "SegmentAnalysisIsInBasinPlay": "BPA2IgnoreValue",
+  "SegmentAnalysisAgeExists": "BPA2IgnoreValue",
+  "SampleSizeIsConsistent": "BPA2IgnoreValue",
+  "IsPullable": "BPA2IgnoreValue"
+}

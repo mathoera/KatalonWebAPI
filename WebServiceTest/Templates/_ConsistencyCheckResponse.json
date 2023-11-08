@@ -1,0 +1,47 @@
+﻿{
+  "ProspectId": "BPA2IgnoreValue",
+  "Segments": [
+    {
+      "SegmentId": "BPA2IgnoreValue",
+      "Name": "BPA2IgnoreValue",
+      "IsConsistent": "BPA2IgnoreValue",
+      "PropertyInfo": [
+        {
+          "TankPropertyType": "BPA2IgnoreValue",
+          "TankPropertyName": "BPA2IgnoreValue",
+          "GeoXValue": "BPA2IgnoreValue",
+          "RAValue": "BPA2IgnoreValue",
+          "IsConsistent": "BPA2IgnoreValue"
+        },
+        {
+          "TankPropertyType": "BPA2IgnoreValue",
+          "TankPropertyName": "BPA2IgnoreValue",
+          "GeoXValue": "BPA2IgnoreValue",
+          "RAValue": "BPA2IgnoreValue",
+          "IsConsistent": "BPA2IgnoreValue"
+        }
+      ]
+    },
+    {
+      "SegmentId": "BPA2IgnoreValue",
+      "Name": "BPA2IgnoreValue",
+      "IsConsistent": "BPA2IgnoreValue",
+      "PropertyInfo": [
+        {
+          "TankPropertyType": "BPA2IgnoreValue",
+          "TankPropertyName": "BPA2IgnoreValue",
+          "GeoXValue": "BPA2IgnoreValue",
+          "RAValue": "BPA2IgnoreValue",
+          "IsConsistent": "BPA2IgnoreValue"
+        },
+        {
+          "TankPropertyType": "BPA2IgnoreValue",
+          "TankPropertyName": "BPA2IgnoreValue",
+          "GeoXValue": "BPA2IgnoreValue",
+          "RAValue": "BPA2IgnoreValue",
+          "IsConsistent": "BPA2IgnoreValue"
+        }
+      ]
+    }
+  ]
+}

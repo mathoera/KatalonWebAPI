@@ -1,0 +1,7 @@
+{
+  "type": "balalla",
+  "crs": {
+    "type": "w",
+    "properties": { "name": "EPSG:4326" }
+  }
+}

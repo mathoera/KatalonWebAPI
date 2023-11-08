@@ -1,0 +1,62 @@
+{
+  "IsResourceDirty": true,
+  "Resource": {
+    "ResourceId": 0,
+    "Name": "Testing - Shell",
+    "Description": "Approve tests",
+    "Latitude": 15.9202219,
+    "Longitude": 72.9492187,
+    "CoordinateSystemId": 4326,
+    "Elevation": 0,
+    "CountryId": 103,
+    "HydrocarbonTypeId": 3,
+    "HydrocarbonTypeName": "Oil & Gas",
+    "CentrePointIsFixed": true,
+    "ExternalGuid": "#NewGuid#",
+    "DataStateId": 2,
+    "DeliveryThemeId": 1,
+    "StrategicThemeId": 1,
+    "CommercialityId": "No",
+    "CRClassificationId": null,
+    "ResourceClassificationId": "Lead",
+    "XorpStepId": 1,
+    "EntitlementId": 1,
+    "ResourceCategoryId": 1,
+    "OwnershipGovernanceId": 2,
+    "R1ObjectiveIdInLicence": null,
+    "R1ObjectiveIdPostLicence": null,
+    "R1FieldId": null,
+    "P1ActivityEntityID": null,
+    "OutlineData": [
+      [
+        [
+          [ 72.9492187, 15.9634102525937 ],
+          [ 72.964190621402, 15.934619050623 ],
+          [ 72.994134464206, 15.9202219 ],
+          [ 72.964190621402, 15.9058237173985 ],
+          [ 72.9492187, 15.8770242596014 ],
+          [ 72.934246778598, 15.905823773985 ],
+          [ 72.904302935793993, 15.9202219 ],
+          [ 72.9342446778598, 15.934619050623 ],
+          [ 72.9492187, 15.9634102525937 ]
+        ]
+      ]
+    ],
+    "RequesterId": null,
+    "ApproverId": null,
+    "Distributions": null,
+    "IsLicenceBlockGesSwisManualOverride": true,
+    "HydrocaronTypeId": 3,
+    "LicenceBlock": null,
+    "LicenseBlockUid": null
+  },
+  "BusinessCase": null,
+  "Tanks": null,
+  "AccessUsersToAdd": [ "#SearchResultId#" ],
+  "AccessUsersToDelete": null,
+  "AccessGroupsToAdd": null,
+  "AccessGroupsToDelete": null,
+  "AttachmentsToDelete": null,
+  "Attachments": null,
+  "RemoveCommercialVolumes": true
+}

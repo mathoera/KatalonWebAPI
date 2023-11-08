@@ -1,0 +1,165 @@
+{
+  "displayFieldName" : "",
+  "fieldAliases" : {
+    "ProspectId" : "ProspectId",
+    "ProspectName" : "ProspectName",
+    "GeoxTechnicalId" : "GeoxTechnicalId",
+    "HydrocarbonType" : "HydrocarbonType",
+    "ProspectState" : "ProspectState",
+    "StrategicTheme" : "StrategicTheme",
+    "Entitlement" : "Entitlement",
+    "OwnershipGovernance" : "OwnershipGovernance",
+    "InOperatingPlan" : "InOperatingPlan",
+    "InArpr" : "InArpr",
+    "ProspectCategory" : "ProspectCategory",
+    "AntExpInLicenseId" : "AntExpInLicenseId",
+    "AntProdInLicenseId" : "AntProdInLicenseId",
+    "OBJECTID" : "OBJECTID",
+    "Shape_Length" : "Shape_Length",
+    "Shape_Area" : "Shape_Area"
+  },
+  "geometryType" : "esriGeometryPolygon",
+  "spatialReference" : {
+    "wkid" : 102100,
+    "latestWkid" : 3857
+  },
+  "fields" : [
+    {
+      "name" : "ProspectId",
+      "type" : "esriFieldTypeInteger",
+      "alias" : "ProspectId"
+    },
+    {
+      "name" : "ProspectName",
+      "type" : "esriFieldTypeString",
+      "alias" : "ProspectName",
+      "length" : 100
+    },
+    {
+      "name" : "GeoxTechnicalId",
+      "type" : "esriFieldTypeInteger",
+      "alias" : "GeoxTechnicalId"
+    },
+    {
+      "name" : "HydrocarbonType",
+      "type" : "esriFieldTypeString",
+      "alias" : "HydrocarbonType",
+      "length" : 100
+    },
+    {
+      "name" : "ProspectState",
+      "type" : "esriFieldTypeString",
+      "alias" : "ProspectState",
+      "length" : 100
+    },
+    {
+      "name" : "StrategicTheme",
+      "type" : "esriFieldTypeString",
+      "alias" : "StrategicTheme",
+      "length" : 100
+    },
+    {
+      "name" : "Entitlement",
+      "type" : "esriFieldTypeString",
+      "alias" : "Entitlement",
+      "length" : 100
+    },
+    {
+      "name" : "OwnershipGovernance",
+      "type" : "esriFieldTypeString",
+      "alias" : "OwnershipGovernance",
+      "length" : 100
+    },
+    {
+      "name" : "InOperatingPlan",
+      "type" : "esriFieldTypeSmallInteger",
+      "alias" : "InOperatingPlan"
+    },
+    {
+      "name" : "InArpr",
+      "type" : "esriFieldTypeSmallInteger",
+      "alias" : "InArpr"
+    },
+    {
+      "name" : "ProspectCategory",
+      "type" : "esriFieldTypeString",
+      "alias" : "ProspectCategory",
+      "length" : 100
+    },
+    {
+      "name" : "AntExpInLicenseId",
+      "type" : "esriFieldTypeString",
+      "alias" : "AntExpInLicenseId",
+      "length" : 100
+    },
+    {
+      "name" : "AntProdInLicenseId",
+      "type" : "esriFieldTypeString",
+      "alias" : "AntProdInLicenseId",
+      "length" : 100
+    },
+    {
+      "name" : "OBJECTID",
+      "type" : "esriFieldTypeOID",
+      "alias" : "OBJECTID"
+    },
+    {
+      "name" : "Shape_Length",
+      "type" : "esriFieldTypeDouble",
+      "alias" : "Shape_Length"
+    },
+    {
+      "name" : "Shape_Area",
+      "type" : "esriFieldTypeDouble",
+      "alias" : "Shape_Area"
+    }
+  ],
+  "features" : [
+    {
+      "attributes" : {
+        "ProspectId" : 0,
+        "ProspectName" : " ",
+        "GeoxTechnicalId" : null,
+        "HydrocarbonType" : null,
+        "ProspectState" : " ",
+        "StrategicTheme" : null,
+        "Entitlement" : null,
+        "OwnershipGovernance" : null,
+        "InOperatingPlan" : null,
+        "InArpr" : null,
+        "ProspectCategory" : " ",
+        "AntExpInLicenseId" : null,
+        "AntProdInLicenseId" : null,
+        "OBJECTID" : 1,
+        "Shape_Length" : 13694.846695054359,
+        "Shape_Area" : 10331150.551714811
+      },
+"geometry" : {
+        "rings" : [
+          [
+            [
+				#LatA#,
+				#LongA#
+            ],
+            [
+				#LatB#,
+				#LongB#
+            ],
+            [
+				#LatC#,
+				#LongC#
+            ],
+            [
+				#LatD#,
+				#LongD#
+            ],
+            [
+				#LatA#,
+				#LongA#
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

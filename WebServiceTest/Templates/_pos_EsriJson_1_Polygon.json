@@ -1,0 +1,286 @@
+{
+  "displayFieldName" : "",
+  "fieldAliases" : {
+    "FID" : "FID",
+    "ProspectId" : "ProspectId",
+    "ProspectNa" : "ProspectNa",
+    "GeoxTechni" : "GeoxTechni",
+    "Hydrocarbo" : "Hydrocarbo",
+    "ProspectSt" : "ProspectSt",
+    "StrategicT" : "StrategicT",
+    "Entitlemen" : "Entitlemen",
+    "OwnershipG" : "OwnershipG",
+    "InOperatin" : "InOperatin",
+    "InArpr" : "InArpr",
+    "ProspectCa" : "ProspectCa",
+    "AntExpInLi" : "AntExpInLi",
+    "AntProdInL" : "AntProdInL",
+    "OBJECTID" : "OBJECTID"
+  },
+  "geometryType" : "esriGeometryPolygon",
+  "spatialReference" : {
+    "wkid" : 4326,
+    "latestWkid" : 4326
+  },
+  "fields" : [
+    {
+      "name" : "FID",
+      "type" : "esriFieldTypeOID",
+      "alias" : "FID"
+    },
+    {
+      "name" : "ProspectId",
+      "type" : "esriFieldTypeInteger",
+      "alias" : "ProspectId"
+    },
+    {
+      "name" : "ProspectNa",
+      "type" : "esriFieldTypeString",
+      "alias" : "ProspectNa",
+      "length" : 100
+    },
+    {
+      "name" : "GeoxTechni",
+      "type" : "esriFieldTypeInteger",
+      "alias" : "GeoxTechni"
+    },
+    {
+      "name" : "Hydrocarbo",
+      "type" : "esriFieldTypeString",
+      "alias" : "Hydrocarbo",
+      "length" : 100
+    },
+    {
+      "name" : "ProspectSt",
+      "type" : "esriFieldTypeString",
+      "alias" : "ProspectSt",
+      "length" : 100
+    },
+    {
+      "name" : "StrategicT",
+      "type" : "esriFieldTypeString",
+      "alias" : "StrategicT",
+      "length" : 100
+    },
+    {
+      "name" : "Entitlemen",
+      "type" : "esriFieldTypeString",
+      "alias" : "Entitlemen",
+      "length" : 100
+    },
+    {
+      "name" : "OwnershipG",
+      "type" : "esriFieldTypeString",
+      "alias" : "OwnershipG",
+      "length" : 100
+    },
+    {
+      "name" : "InOperatin",
+      "type" : "esriFieldTypeInteger",
+      "alias" : "InOperatin"
+    },
+    {
+      "name" : "InArpr",
+      "type" : "esriFieldTypeInteger",
+      "alias" : "InArpr"
+    },
+    {
+      "name" : "ProspectCa",
+      "type" : "esriFieldTypeString",
+      "alias" : "ProspectCa",
+      "length" : 100
+    },
+    {
+      "name" : "AntExpInLi",
+      "type" : "esriFieldTypeString",
+      "alias" : "AntExpInLi",
+      "length" : 100
+    },
+    {
+      "name" : "AntProdInL",
+      "type" : "esriFieldTypeString",
+      "alias" : "AntProdInL",
+      "length" : 100
+    },
+    {
+      "name" : "OBJECTID",
+      "type" : "esriFieldTypeInteger",
+      "alias" : "OBJECTID"
+    }
+  ],
+  "features" : [
+    {
+      "attributes" : {
+        "FID" : 0,
+        "ProspectId" : 21111070,
+        "ProspectNa" : "Mount Adishi",
+        "GeoxTechni" : 0,
+        "Hydrocarbo" : "Gas",
+        "ProspectSt" : "Submitted",
+        "StrategicT" : "Expanding Heartlands",
+        "Entitlemen" : " ",
+        "OwnershipG" : " ",
+        "InOperatin" : 0,
+        "InArpr" : 0,
+        "ProspectCa" : "Step 2 - PR Lead",
+        "AntExpInLi" : " ",
+        "AntProdInL" : " ",
+        "OBJECTID" : 21111070
+      },
+      "geometry" : {
+        "rings" : [
+          [
+            [
+              371902.80195160583,
+              666565.77072553709
+            ],
+            [
+              376951.24037870765,
+              666818.14986746013
+            ],
+            [
+              379440.43758989871,
+              664252.91840988025
+            ],
+            [
+              383372.78735889494,
+              662967.82014526054
+            ],
+            [
+              388747.275453832,
+              661745.27197887003
+            ],
+            [
+              392549.06549389288,
+              661356.86787870526
+            ],
+            [
+              394450.28295082971,
+              661482.95323338732
+            ],
+            [
+              395825.90632253885,
+              660520.31071037799
+            ],
+            [
+              393724.74102637917,
+              657319.00453764573
+            ],
+            [
+              392740.49160345644,
+              656359.04527654871
+            ],
+            [
+              390970.26145363227,
+              655976.46554363146
+            ],
+            [
+              389266.66069446504,
+              656618.86161769554
+            ],
+            [
+              385464.28255353495,
+              656109.99980610237
+            ],
+            [
+              383824.88219372928,
+              655406.75778174028
+            ],
+            [
+              382643.94158327952,
+              654190.50278396904
+            ],
+            [
+              381855.13400923833,
+              651628.51250687987
+            ],
+            [
+              380805.75934460759,
+              650860.59324970469
+            ],
+            [
+              379298.30820363387,
+              650989.98120685294
+            ],
+            [
+              377792.33505153656,
+              652977.30496779084
+            ],
+            [
+              376416.31360132992,
+              653555.02896970138
+            ],
+            [
+              374842.99794591591,
+              653364.04625302181
+            ],
+            [
+              373072.17190285772,
+              651955.907278914
+            ],
+            [
+              372284.5491021499,
+              650482.92553097755
+            ],
+            [
+              371038.89713586867,
+              650035.38761246949
+            ],
+            [
+              369073.02420547977,
+              650741.45005903393
+            ],
+            [
+              366582.38941439241,
+              650935.2748603411
+            ],
+            [
+              364484.47242097929,
+              650167.76110670716
+            ],
+            [
+              363697.24992515519,
+              649015.09526156634
+            ],
+            [
+              362189.77451653033,
+              649015.95865347609
+            ],
+            [
+              360879.22061545402,
+              649721.38749064505
+            ],
+            [
+              359110.69688209891,
+              652092.75597583503
+            ],
+            [
+              360487.5040252693,
+              652604.62497051805
+            ],
+            [
+              362389.71857089177,
+              654974.08302339539
+            ],
+            [
+              363964.0145057328,
+              656895.37271855399
+            ],
+            [
+              367964.92093974352,
+              660224.68758543208
+            ],
+            [
+              371180.06026894972,
+              664387.55620785058
+            ],
+            [
+              371902.80195160583,
+              666565.77072553709
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "Version": {
+    "_Major": 1,
+    "_Minor": 1,
+    "_Build": -1,
+    "_Revision": -1
+  },
+  "Content": null,
+  "StatusCode": 200,
+  "ReasonPhrase": "Resource have been successfuly deleted",
+  "Headers": [],
+  "RequestMessage": null,
+  "IsSuccessStatusCode": true
+}
